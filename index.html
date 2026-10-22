@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It's OK to Play Rugby by Melissa Doe | Avon (concept mockup)</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --black:#1b1b1b; --white:#fff; --beige:#f4f1ea; --dust:#e6e1d6; --sand:#d9d2c3;
+    --blue:#0d4a8f; --red:#c0392b; --gray:#5b5b5b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--black);background:var(--white);line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--blue)}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+
+  /* mockup banner + messaging bar */
+  .mock{background:#fff3c4;color:#5a4a00;font-size:12px;text-align:center;padding:6px 10px}
+  .msg{background:var(--black);color:#fff;font-size:12px;text-align:center;padding:8px 10px;letter-spacing:.03em}
+
+  /* header */
+  header{border-bottom:1px solid var(--dust);background:#fff;position:sticky;top:0;z-index:20}
+  .top{display:flex;align-items:center;gap:24px;min-height:72px}
+  .logo{font-family:Georgia,serif;font-size:30px;letter-spacing:.28em;font-weight:700;border:2px solid var(--black);padding:2px 10px 2px 14px}
+  .primary{display:flex;gap:22px;font-size:14px}
+  .primary a.active{color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:4px}
+  .search{flex:1;max-width:420px;margin-left:auto}
+  .search input{width:100%;border:0;background:var(--beige);border-radius:30px;padding:11px 18px;font-size:13px}
+  .icons{display:flex;gap:18px;font-size:13px}
+  .sub{border-top:1px solid var(--dust)}
+  .sub .wrap{display:flex;gap:22px;align-items:center;min-height:44px;font-size:13px;overflow-x:auto;white-space:nowrap}
+  .sub .pill{margin-left:auto;background:var(--blue);color:#fff;border-radius:30px;padding:8px 18px;font-size:13px}
+
+  /* breadcrumb */
+  .crumbs{font-size:13px;padding:10px 0;display:flex;flex-wrap:wrap;gap:8px;color:var(--gray)}
+  .crumbs span.sep{opacity:.5}
+
+  /* hero */
+  .hero{background:linear-gradient(90deg,var(--dust) 50%,var(--beige) 50%)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .hero-l{background:var(--dust);padding:48px 20px 56px;display:flex;flex-direction:column;align-items:center}
+  .cover{width:300px;max-width:80%;box-shadow:0 20px 50px rgba(0,0,0,.25);background:#244f82;aspect-ratio:2/3;position:relative}
+  .cover img{display:block;width:100%;height:100%;object-fit:cover}
+  .cover .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px;font-size:13px}
+  .badge{margin-top:18px;background:var(--black);color:#fff;border-radius:30px;font-size:12px;padding:6px 14px;font-weight:600}
+  .teaser{margin-top:28px;text-align:center;font-size:14px;max-width:420px}
+  .hero-r{background:var(--beige);padding:48px 40px 56px 60px}
+  .hero-r h1{font-size:30px}
+  .hero-r .subtitle{color:var(--gray);margin:4px 0 8px}
+  .by{font-size:14px}.by a{font-weight:600}
+  .buybox{border-top:1px solid var(--dust);border-bottom:1px solid var(--dust);margin:28px 0;padding:24px 0;text-align:center}
+  .price{font-size:40px;color:var(--red);font-family:Georgia,serif}
+  .row{display:flex;gap:10px;margin-top:16px}
+  .btn{flex:1;background:var(--blue);color:#fff;border:0;border-radius:30px;padding:14px 24px;font-size:14px;cursor:pointer;transition:background .2s}
+  .btn:hover{background:var(--black)}
+  .heart{width:48px;border:0;background:none;font-size:26px;cursor:pointer;color:var(--blue)}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+  .chip{background:#fff;border-radius:6px;padding:10px 14px;font-size:13px}
+  .chip b{display:block;font-weight:600}
+  .chip span{color:var(--gray)}
+  .delivery{background:var(--dust);border-radius:10px;padding:20px;text-align:center}
+  .delivery h4{font-family:Georgia,serif;font-weight:400;margin-bottom:12px}
+  .delivery input{width:100%;border:1px solid var(--dust);border-radius:30px;padding:13px 18px;font-size:13px;background:#fff}
+
+  /* details */
+  section.block{padding:72px 0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .two h2{font-size:28px;margin-bottom:20px}
+  .prose p{margin-bottom:16px;font-size:15px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{font-weight:400;text-align:left}
+  td{text-align:right;font-weight:600}
+  th,td{padding:11px 0;border-bottom:1px solid var(--dust)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .tags a{background:var(--sand);border-radius:30px;padding:6px 12px;font-size:13px;font-weight:500}
+  .findin h6{font-size:16px;font-family:Georgia,serif;font-weight:400;margin-top:40px}
+  .alt{background:var(--beige)}
+  .narrow{max-width:780px;margin:0 auto}
+  .narrow small{font-weight:600;font-size:13px;display:block;margin-bottom:6px}
+
+  /* carousels */
+  .car-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .car-head h2{font-size:28px}
+  .car-head a{background:var(--blue);color:#fff;border-radius:30px;padding:10px 20px;font-size:13px}
+  .car{display:flex;gap:20px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+  .card{flex:0 0 220px;scroll-snap-align:start}
+  .card .img{background:var(--beige);height:300px;display:flex;align-items:center;justify-content:center;padding:28px}
+  .card .mini{width:100%;height:100%;box-shadow:0 10px 24px rgba(0,0,0,.25);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10px;color:#fff;font-family:Georgia,serif;font-size:15px;line-height:1.2}
+  .card .mini em{font-size:10px;font-style:normal;letter-spacing:.15em;margin-top:8px;opacity:.85;font-family:Arial,sans-serif}
+  .card .atc{background:var(--sand);text-align:center;font-size:12px;padding:12px}
+  .card h3{font-family:Arial,sans-serif;font-weight:700;font-size:14px;margin:14px 0 6px}
+  .card .p{font-weight:600;font-size:15px}
+  .card .meta{color:var(--gray);font-size:11px}
+
+  /* footer */
+  footer{background:var(--black);color:#fff;padding:56px 0 32px;margin-top:40px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  footer h5{font-family:Georgia,serif;font-weight:400;font-size:18px;margin-bottom:12px}
+  footer li{list-style:none;font-size:13px;margin-bottom:8px}
+  footer a:hover{color:#fff;text-decoration:underline}
+  footer .logo{border-color:#fff;display:inline-block;margin-bottom:20px}
+  .copy{margin-top:48px;font-size:12px;opacity:.7}
+
+  @media(max-width:860px){
+    .primary,.icons,.search{display:none}
+    .hero{background:var(--beige)}
+    .hero .wrap,.two,.fgrid{grid-template-columns:1fr}
+    .hero-r{padding:32px 20px}
+    .two{gap:40px}
+  }
+</style>
+</head>
+<body>
+
+<div class="mock">Concept mockup for a fictional book and fictional shop. Not a real store, product or listing.</div>
+<div class="msg">Everything Books at Avon | 30 Day Free Returns* | Shipping from $4.50</div>
+
+<header>
+  <div class="wrap top">
+    <a class="logo" href="#">AVON</a>
+    <nav class="primary">
+      <a class="active" href="#">Books</a><a href="#">Toys</a><a href="#">Home</a><a href="#">Baby</a><a href="#">Sports &amp; Outdoors</a><a href="#">Hobbies</a><a href="#">Blog</a>
+    </nav>
+    <div class="search"><input placeholder="Search by title, author or keyword" aria-label="Search"></div>
+    <div class="icons"><a href="#">Account</a><a href="#">Wishlist</a><a href="#">Cart (<span id="cartCount">0</span>)</a></div>
+  </div>
+  <div class="sub"><div class="wrap">
+    <a href="#">Fiction</a><a href="#">Non-Fiction</a><a href="#">Children's Books</a><a href="#">Young Adult</a><a href="#">Manga &amp; Graphic Novels</a><a href="#">New Zealand</a><a href="#">Māoritanga</a>
+    <a class="pill" href="#">Take a Shelfie</a>
+  </div></div>
+</header>
+
+<div class="wrap crumbs" id="crumbs"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-l">
+      <div class="cover">
+        <img id="coverImg" alt="" src="cover.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="fallback">Add your cover image to the repo as <b>&nbsp;cover.png&nbsp;</b></div>
+      </div>
+      <div class="badge" id="fmtBadge"></div>
+      <p class="teaser" id="teaser"></p>
+    </div>
+    <div class="hero-r">
+      <h1 id="title"></h1>
+      <h2 class="subtitle" id="subtitle" style="font-family:Arial,sans-serif;font-size:16px;font-weight:500"></h2>
+      <div class="by">By: <a href="#" id="author"></a></div>
+      <div class="buybox">
+        <div class="price" id="price"></div>
+        <div class="row">
+          <button class="btn" id="addBtn">Pre-order</button>
+          <button class="heart" aria-label="Add to wishlist" id="wish">♡</button>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip"><b id="fmt2"></b><span id="pages"></span></div>
+        <div class="chip"><b>Release Date</b><span id="rel"></span></div>
+      </div>
+      <div class="delivery">
+        <h4>Check Delivery Options</h4>
+        <input placeholder="Enter Your Postcode or City" aria-label="Postcode">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap two">
+    <div>
+      <h2>Summary</h2>
+      <div class="prose" id="desc"></div>
+      <div class="findin">
+        <h6>You Can Find This Book In</h6>
+        <div class="tags" id="tags"></div>
+      </div>
+    </div>
+    <div>
+      <h2>Book Details</h2>
+      <table id="details"></table>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap"><div class="narrow">
+    <small>About The Author</small>
+    <h2 id="authorName" style="font-size:28px;margin-bottom:16px"></h2>
+    <div class="prose" id="bio"></div>
+  </div></div>
+</section>
+
+<section class="block">
+  <div class="wrap"><div class="narrow">
+    <h2 style="font-size:28px;margin-bottom:16px">Returns</h2>
+    <div class="prose"><p>This item is eligible for free returns within 30 days of delivery. See our returns policy for further details.</p></div>
+  </div></div>
+</section>
+
+<div id="carousels"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#">AVON</a>
+        <p style="font-family:Georgia,serif;font-size:18px;max-width:340px">Sign up to be the first to know about special offers, book news and latest products.</p>
+      </div>
+      <div><h5>Shop</h5><ul><li><a href="#">Books</a></li><li><a href="#">Toys</a></li><li><a href="#">Baby</a></li><li><a href="#">Home</a></li><li><a href="#">Hobbies</a></li><li><a href="#">Sports &amp; Outdoors</a></li></ul></div>
+      <div><h5>Avon</h5><ul><li><a href="#">About Us</a></li><li><a href="#">Business Orders</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div><h5>Support</h5><ul><li><a href="#">Track Your Order</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Shipping and Returns</a></li><li><a href="#">Payment Methods</a></li></ul></div>
+    </div>
+    <div class="copy">Concept mockup. Avon is a fictional shop. © 2026</div>
+  </div>
+</footer>
+
+<script>
+/* ============ EDIT THIS BLOCK ============ */
+const BOOK = {
+  title: "It's OK to Play Rugby",
+  subtitle: "Why the game is so misunderstood",
+  author: "Melissa Doe",
+  price: "$39.00",
+  format: "Paperback",
+  pages: 321,
+  releaseDate: "4 October 2027",
+  isbn13: "978-0-000-00000-0",          // placeholder, replace or remove
+  publisher: "Your Publisher Here",      // placeholder, replace or remove
+  teaser: "A short one-line teaser for the book goes here.", // placeholder
+  // Description: one string per paragraph. PLACEHOLDER, paste your own.
+  description: [
+    "In the first televised leaders’ debate for New Zealand’s 2026 elections, the leaders of the National and Labour parties were asked a quick fire question by TVNZ moderator Jack Tame: “Would you let your kids play rugby?”.",
+    "The quick fire questions are designed to be controversial and difficult to answer – the implication of the question was that letting kids play rugby is controversial – almost unacceptable.",
+    "Watching this debate, journalist Melissa Doe, mother of two boys and a daughter who all play rugby, started asking herself: Am I bad parent? Is it wrong to play rugby?",
+    "Melissa couldn’t reconcile the disconnect between her family’s positive experience of rugby with the idea that it’s socially unacceptable to play. How did rugby - the nation’s traditional sport - end up in this position? How has the game become so misunderstood?",
+    "This led Melissa on a journey up and down the country to find out if her positive experience of rugby was an outlier, or if she really was a bad parent. Melissa visited rugby clubs from the far north to the far south to hear firsthand from rugby communities about what being involved in the game was really like. She also visited NZ Rugby headquarters in Wellington and talked to the TVNZ journalists who put together the leaders’ debate.",
+    "Melissa’s investigation found a game that’s going through a transformation, that is unsure of itself, and caught in the middle of a divisive media landscape. But through all the interviews, research and discussion, she found incredible communities connecting people and place and making a positive impact. She found families up and down the country passionate about the game and how it has enriched their lives. Ultimately, she discovered it’s OK to play rugby.",
+    "Melissa’s book reveals what it’s really like to be part of the changing rugby whānau and how ‘main stream’ New Zealand has missed and misunderstood the game’s transformation. Melissa tackles the real risks of injury head-on and what parents really think. She also shows us the grassroots humility found in clubrooms up and down the country, and gives us a glimpse of the new legacy that clubs will leave behind: a game that’s more inclusive, more diverse, safer, sober and mana enhancing. It’s a must read for everyone in the game, and every curious New Zealander who thinks they know the game."
+  ],
+  // Author bio: PLACEHOLDER, paste your own.
+  bio: [
+    "Paste the author bio here."
+  ],
+  categories: ["Books","Non-Fiction","Sports & Recreation","Rugby"],
+  moreInCategory: "Sports & Recreation"
+};
+
+// Fictional filler titles for the "more like this" carousels (all invented)
+const FILLER = [
+  {t:"The Long Way Round", a:"A. Fenwick", p:"$34.99", c:"#8a4b2b"},
+  {t:"Southern Light", a:"R. Takahashi", p:"$29.99", c:"#2f5d62"},
+  {t:"Small Hours", a:"L. Marsh", p:"$27.99", c:"#5b3a6b"},
+  {t:"Field Notes", a:"J. Okafor", p:"$36.50", c:"#3b6b3a"},
+  {t:"Coast to Coast", a:"M. Pereira", p:"$32.00", c:"#a0522d"},
+  {t:"The Quiet Season", a:"H. Lindqvist", p:"$31.99", c:"#2d4a7a"},
+  {t:"Ground Rules", a:"S. Waititi-Brown", p:"$38.00", c:"#7a2d3a"}
+];
+/* ========================================= */
+
+const $ = id => document.getElementById(id);
+document.title = `${BOOK.title} by ${BOOK.author} | Avon (concept mockup)`;
+$('coverImg').alt = `${BOOK.title} by ${BOOK.author}`;
+$('title').textContent = BOOK.title;
+$('subtitle').textContent = BOOK.subtitle;
+$('author').textContent = BOOK.author;
+$('authorName').textContent = BOOK.author;
+$('price').textContent = BOOK.price;
+$('fmtBadge').textContent = BOOK.format;
+$('fmt2').textContent = BOOK.format;
+$('pages').textContent = BOOK.pages + " pages";
+$('rel').textContent = BOOK.releaseDate;
+$('teaser').textContent = BOOK.teaser;
+$('desc').innerHTML = BOOK.description.map(p=>`<p>${p}</p>`).join('');
+$('bio').innerHTML = BOOK.bio.map(p=>`<p>${p}</p>`).join('');
+$('tags').innerHTML = [...BOOK.categories, BOOK.author].map(c=>`<a href="#">${c}</a>`).join('');
+$('crumbs').innerHTML = ["Home",...BOOK.categories].map(c=>`<a href="#">${c}</a><span class="sep">›</span>`).join('') + `<span>${BOOK.title}</span>`;
+
+const rows = [
+  ["ISBN-13", BOOK.isbn13],
+  ["Author", BOOK.author],
+  ["Publisher", BOOK.publisher],
+  ["Format", BOOK.format],
+  ["Number of Pages", BOOK.pages],
+  ["Release Date", BOOK.releaseDate]
+].filter(r=>r[1]);
+$('details').innerHTML = rows.map(r=>`<tr><th>${r[0]}:</th><td>${r[1]}</td></tr>`).join('');
+
+function carousel(title, link, offset){
+  const items = FILLER.map((_,i)=>FILLER[(i+offset)%FILLER.length]);
+  return `<section class="block" style="padding:40px 0"><div class="wrap">
+    <div class="car-head"><h2>${title}</h2><a href="#">${link}</a></div>
+    <div class="car">${items.map(b=>`
+      <div class="card">
+        <div class="img"><div class="mini" style="background:${b.c}">${b.t}<em>${b.a.toUpperCase()}</em></div></div>
+        <div class="atc">Add to Cart</div>
+        <h3>${b.t}</h3><div class="p">${b.p}</div><div class="meta">${b.a} · Paperback</div>
+      </div>`).join('')}
+    </div></div></section>`;
+}
+$('carousels').innerHTML =
+  carousel("More from " + BOOK.author, "Shop All " + BOOK.author, 0) +
+  carousel("More in " + BOOK.moreInCategory, "Shop All " + BOOK.moreInCategory, 3);
+
+let n = 0;
+$('addBtn').addEventListener('click', e=>{
+  n++; $('cartCount').textContent = n;
+  e.target.textContent = "Added ✓";
+  setTimeout(()=>e.target.textContent="Pre-order", 1200);
+});
+$('wish').addEventListener('click', e=>{
+  e.target.textContent = e.target.textContent==="♡" ? "♥" : "♡";
+});
+</script>
+</body>
+</html>
